@@ -17,7 +17,8 @@ a {
 .todolist{
 padding: 20px;
 background-color: #f00ff0;
-margin: 5px;
+margin: 15px;
+border-radius: 10px;
 }
 
 .todo {
@@ -27,4 +28,9 @@ margin: 5px;
 
 ul li {
   border: 1px black !important;
+}
+
+.todolist:hover{
+  background-color: black;
+  color: #f00ff0;
 }
