@@ -16,12 +16,12 @@ class App extends Component {
         {
           id: 2,
           title: 'Do Laundry',
-          completed: false
+          completed: true
         },
         {
           id: 3,
           title: 'Do some house chores',
-          completed: false
+          completed: true
         },
         {
           id: 4,
@@ -31,6 +31,10 @@ class App extends Component {
       ]
     }
   }
+
+  markComplete = (e) => {
+    console.log('From App js')
+}
 
 
 
@@ -42,11 +46,11 @@ class App extends Component {
     // }
 
   
-    return (
+   return (
       <div className="App">
-        <Todos list={this.state.todos} />
+        <Todos list={this.state.todos} markComplete={this.markComplete} />
         
-      </div>
+      </div>  
     );
   }
 }
