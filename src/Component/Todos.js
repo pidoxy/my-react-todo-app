@@ -6,34 +6,18 @@ import PropTypes from 'prop-types';    // I'm not exactly sure what function Pro
 class Todos extends Component {
     constructor(props) {
         super(props)
-
-        this.getStyle = () => {
-            if (this.props.list.completed) {
-                return {
-                    textDecoration: 'line-through'
-                }
-            } else {
-                return {
-                    textDecoration: 'none'
-                }
-
-            }
-
-        }
     }
-
-    
 
     render() {
         const listItem = this.props.list.map((item) => (
-            <div>
-                <input type='checkbox' onChange={this.markComplete}/> {''}
-                <li key={item.id}> {item.title} </li>
+            <div className='todolist'>
+                <input type='checkbox' onChange /><li className='todo' key={item.id}>{item.title}</li>
+                
 
             </div>
         ));
         return (
-            <ul> {listItem} </ul>
+            <ul>{listItem}</ul>
         );
     }
 }
@@ -41,7 +25,5 @@ class Todos extends Component {
 Todos.propTypes = {                                // I need clarificaton on this
     list: PropTypes.array.isRequired
 }
-
-
 
 export default Todos;
