@@ -34,3 +34,31 @@ ul li {
   background-color: black;
   color: #f00ff0;
 }
+
+.Add-todo {
+  padding: 20px;
+margin: 15px;
+border-radius: 10px;
+}
+
+.Add-todo input {
+  width:85%;
+  height:40px;
+  border-radius: 10px;
+  
+}
+
+.Add-todo button {
+  width:15%;
+  height:40px;
+  border-radius: 10px;
+  color: #f00ff0;
+  background-color: black;
+  }
+
+.Add-todo button:hover{
+  color: #f00ff0;
+  background-color: grey;
+
+}
+

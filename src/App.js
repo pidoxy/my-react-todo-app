@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Todos from './Component/Todos'
+import Addtodo from './Component/Addtodo'
 
 class App extends Component {
   constructor(props) {
@@ -48,9 +49,10 @@ class App extends Component {
   
    return (
       <div className="App">
+        <Addtodo />
         <Todos list={this.state.todos} markComplete={this.markComplete} />
-        
       </div>  
+      
     );
   }
 }
