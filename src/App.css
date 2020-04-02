@@ -17,8 +17,8 @@ a {
 .todolist{
 padding: 20px;
 background-color: #f00ff0;
-margin: 15px;
-border-radius: 10px;
+margin: 1px;
+
 }
 
 .todo {
@@ -36,30 +36,51 @@ ul li {
 }
 
 .Add-todo {
-  padding: 20px;
-margin: 15px;
-border-radius: 10px;
+padding: 20px;
 }
 
 .Add-todo input {
   width:85%;
   height:40px;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   padding:10px 0;
   
 }
 
-.Add-todo button {
+.Add-todo .btn {
   width:15%;
   height:40px;
-  border-radius: 10px;
+  border-radius:  0 10px 10px 0 ;
   color: #f00ff0;
   background-color: black;
   }
 
-.Add-todo button:hover{
+.btn:hover{
   color: #f00ff0;
   background-color: grey;
 
+}
+
+.btn:active{
+  color: #f00ff0;
+  background-color: black;
+
+}
+
+.btnStyle {
+  background: #ff0000 ;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  float: right;
+}
+
+.headerStyle {
+  background: #888;
+  text-align: center;
+  padding: 20px;
+  color:#400440
 }
 
