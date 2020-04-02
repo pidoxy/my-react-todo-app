@@ -11,7 +11,7 @@ class Todos extends Component {
     render() {
         const listItem = this.props.list.map((item) => (
             <div className='todolist'>
-                <input type='checkbox' onChange /><li className='todo' key={item.id}>{item.title}</li>
+                <input type='checkbox' checked={item.completed} /><li className='todo' key={item.id}>{item.title}</li>
                 
 
             </div>
