@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Component/layout/Header'
 import Todos from './Component/Todos'
 import Addtodo from './Component/Addtodo'
+import { v4 as uuidv4} from 'uuid';
 
 class App extends Component {
   constructor(props) {
@@ -11,22 +12,22 @@ class App extends Component {
     this.state = {
       todos: [
         {
-          id: 1,
+          id: uuidv4(),
           title: 'Play the guitar',
           completed: false
         },
         {
-          id: 2,
+          id: uuidv4(),
           title: 'Do Laundry',
           completed: false
         },
         {
-          id: 3,
+          id: uuidv4(),
           title: 'Do some house chores',
           completed: false
         },
         {
-          id: 4,
+          id: uuidv4(),
           title: 'Go grocery shopping',
           completed: false
         }
@@ -51,7 +52,12 @@ class App extends Component {
 
     this.addTodo = (newTodo) => {
       console.log(newTodo)
-      // this.setState({ todos: [...]})
+      newTodo  = {
+        id: uuidv4(),
+        title: newTodo,
+        completed: false
+      }
+      this.setState({ todos: [...this.state.todos, newTodo]})
     }
 
   }
@@ -72,16 +78,3 @@ class App extends Component {
 export default App;
 
 
-// import React from 'react';
-// import './App.css';
-// import { render } from 'react-dom';
-
-// function App() {
-//   return (
-//     <div className="App">
-//      <h1>App</h1>
-//     </div>
-//   );
-// }
-
-// export default App;

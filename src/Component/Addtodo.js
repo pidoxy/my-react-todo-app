@@ -14,7 +14,7 @@ import React, { Component } from 'react'
 
     this.submit = (event) => {
         event.preventDefault();
-        this.props.addTodo(this.state.title);
+        this.props.addTodo(this.state.newTodo);
         this.setState({ newTodo: '' });
 
     }
